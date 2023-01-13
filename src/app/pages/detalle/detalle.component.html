@@ -1,0 +1,47 @@
+
+<div class="w-[60%] p-5 mx-auto mt-5">
+
+    <!-- <h2 class="text-lg font-bold text-center">PRODUCTO NRO: {{id}}</h2>
+    <p>{{codigo}}</p>
+    <p>{{descripcion}}</p>
+    <p>{{precioventa}}</p>
+    <p>{{descripcion}}</p>
+    <p>{{codigo}}</p> -->
+    
+<div class="w-[50%] mx-auto bg-slate-50 shadow-lg shadow-gray-400 rounded">
+    <div *ngFor="let data of this.DetalleServices.array" 
+    class="mt-10 px-[2rem] ">
+        <div *ngIf="data[0] == this.id">
+          <div>
+            <h2 class="text-lg font-bold text-center py-4 border-b-8 border-violet-500">EL ID ES: <span class="text-xl font-bold text-red-500">{{id}}</span></h2>
+          </div>
+          <div class="my-2">
+            <label for="cod" class="font-medium">Codigo de barras</label>
+            <input type="text" id="cod" value="{{data[0]}}" class="text-gray-500 block" disabled>
+          </div>
+          <div class="my-2">
+            <p class="font-medium">Descripción</p>
+            <p class="text-gray-500">{{data[1]}}</p>
+          </div>
+          
+          <div class="my-2">
+            <p class="font-medium">Precio de compra</p>
+            <p class="text-gray-500">{{data[2]}}</p>
+          </div>
+
+          <div class="my-2">
+            <p class="font-medium">Precio de venta</p>
+            <p class="text-gray-500">{{data[3]}}</p>
+          </div>
+          
+          <div class="my-2 pb-5">
+            <p class="font-medium">Existencia</p>
+            <p class="text-gray-500">{{data[5]}}</p>
+          </div>
+          
+        </div>
+    </div>
+</div>
+    
+    
+</div>
